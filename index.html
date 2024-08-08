@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Invest in a wide variety of leading cryptos on tradercoin’s easy-to-use platform. Build connections and expand your knowledge alongside millions of other investors."
+    />
+    <meta name="keywords" content="tradercoin coin ctypto trading invest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="Image/icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>tradercoin: The crypto trading platform trusted by millions</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1211799346681320");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1211799346681320&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body class="text-black overflow-x-hidden w-full mode-color" id="body">
+    <!-- Header -->
+    <header
+      class="w-full absolute transition-all z-40 bg-white bg-opacity-85 mode-color"
+      id="header"
+    >
+      <nav
+        class="max-w-[1120px] flex justify-between m-auto items-center h-[70px] z-40 px-2"
+      >
+        <h1 class="text-3xl font-bold text-indigo-500">TraderCoin</h1>
+        <ul
+          id="menu"
+          class="flex font-bold gap-5 text-lg md:static fixed top-0 right-[-100%] transition-all md:h-auto h-[100vh] md:w-auto w-full md:flex-row flex-col md:bg-transparent bg-white z-50 p-3 mode-color"
+        >
+          <div class="flex justify-between">
+            <h1 class="text-3xl text-indigo-500 font-bold md:hidden">
+              TraderCoin
+            </h1>
+            <button id="close-btn" class="flex justify-end text-3xl md:hidden">
+              <ion-icon name="close"></ion-icon>
+            </button>
+          </div>
+          <li>Trade</li>
+          <li>Future</li>
+          <li>Learn</li>
+          <li>Business</li>
+        </ul>
+        <div class="flex items-center gap-6">
+          <button id="mode" class="text-xl">
+            <i id="mode-icon" class="fa-solid fa-moon"></i>
+          </button>
+          <div class="flex items-center rounded-xl">
+            <button
+              onclick="url()"
+              class="text-lg w-32 h-10 flex justify-center items-center hover:bg-blue-700 bg-indigo-500 transition-all duration-500 text-white rounded-2xl border-gray-500 cursor-pointer"
+            >
+              Join Group
+            </button>
+          </div>
+          <button class="text-3xl md:hidden flex items-center" id="menu-btn">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="w-full absolute top-[100px]">
+      <section
+        class="max-w-[1120px] m-auto flex items-center md:flex-row flex-col px-2"
+      >
+        <div class="max-w-[500px]">
+          <h1 class="text-6xl font-bold leading-[70px]">
+            All things crypto, right here!
+          </h1>
+          <div
+            class="mt-8 h-6 overflow-y-hidden font-semibold text-zinc-500 text-focus"
+          >
+            <span> Trusted by 1.5 Cr+ users to </span>
+            <div
+              class="inline-flex flex-col items-center buysellanimation h-[75px] font-bold"
+            >
+              <span class="block text-green-600">Buy</span>
+              <span class="block text-red-500">Sell</span>
+              <span class="block text-orange-400">Trade</span>
+            </div>
+            <span>Crypto </span>
+          </div>
+          <div class="flex mt-10 gap-4">
+            <button
+              onclick="url()"
+              class="text-lg w-32 h-10 flex justify-center items-center hover:bg-blue-700 bg-indigo-500 transition-all duration-500 text-white rounded-xl border-gray-500 cursor-pointer"
+            >
+              Join Group
+            </button>
+            <button
+              id="show-qr"
+              class="text-indigo-500 flex items-center gap-3 bg-gray-200 hover:bg-zinc-300 transition-all duration-500 rounded-xl w-32 h-10 justify-center font-bold"
+            >
+              <span class="flex items-center"
+                ><ion-icon name="qr-code-outline"></ion-icon
+              ></span>
+              Scan QR
+            </button>
+          </div>
+          <div class="mt-10 flex gap-4">
+            <div>
+              <img class="w-24" src="Image/hero-FIU-registered.svg" alt="" />
+            </div>
+            <div>
+              <img class="w-24" src="Image/hero-ISO-IEC-badge.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="md:px-0 px-10">
+          <img src="Image/coin-hero.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Qr Code  -->
+      <div
+        id="qr"
+        class="w-full h-[100vh] fixed top-0 left-0 filter backdrop-blur-[3px] hidden"
+      >
+        <div
+          id="qr-box"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] bg-white p-4 shadow-md shadow-gray-300 rounded-xl"
+        >
+          <div class="flex justify-end text-xl">
+            <button id="close-qr">
+              <ion-icon name="close"></ion-icon>
+            </button>
+          </div>
+          <h2 class="text-3xl font-bold">tradercoin</h2>
+          <p class="mt-2">
+            Scan the QR using your mobile camera to get the correct join link
+          </p>
+          <img src="Image/qr-code.png" alt="" />
+        </div>
+      </div>
+
+      <!-- Your first premire  -->
+      <section class="max-w-[1120px] m-auto mt-20 px-2">
+        <h2 class="text-4xl font-semibold">Your premier platform for crypto</h2>
+        <div class="grid sm:grid-cols-3 grid-cols-1 gap-6 mt-8">
+          <div>
+            <h3 class="text-5xl font-semibold">1.5 Cr+</h3>
+            <h3 class="text-zinc-500 font-semibold mt-1">Registered Users</h3>
+          </div>
+          <div>
+            <h3 class="text-5xl font-semibold">500 +</h3>
+            <h3 class="text-zinc-500 font-semibold mt-1">Crypto Assets</h3>
+          </div>
+          <div>
+            <h3 class="text-5xl font-semibold">$1000 Cr+</h3>
+            <h3 class="text-zinc-500 font-semibold mt-1">
+              Quarterly Trading Volumes
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- One platform  -->
+      <section
+        class="max-w-[1120px] m-auto mt-28 flex px-2 gap-10 sm:flex-row flex-col"
+      >
+        <div class="max-w-[500px]">
+          <h2 class="text-4xl font-semibold">
+            One platform, endless possibilities
+          </h2>
+          <ul class="text-xl text-zinc-500 mt-8 font-semibold">
+            <li>Buy/Sell</li>
+            <li>Earn</li>
+            <li>Spot Trading</li>
+            <li>Futures Trading</li>
+            <li>Trade Signals</li>
+            <li>Web3</li>
+          </ul>
+          <div class="flex mt-10 gap-4">
+            <button
+              onclick="url()"
+              class="text-lg w-32 h-10 flex justify-center items-center hover:bg-blue-700 bg-indigo-500 transition-all duration-500 text-white rounded-xl border-gray-500 cursor-pointer"
+            >
+              Join Group
+            </button>
+            <button
+              id="show-qr2"
+              class="text-indigo-500 flex items-center gap-3 bg-gray-200 hover:bg-zinc-300 transition-all duration-500 rounded-xl w-32 h-10 justify-center font-bold"
+            >
+              <span class="flex items-center"
+                ><ion-icon name="qr-code-outline"></ion-icon
+              ></span>
+              Scan QR
+            </button>
+          </div>
+        </div>
+        <div class="max-w-[450px]">
+          <img src="Image/phone.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Strategie -->
+      <section class="max-w-[1120px] m-auto mt-16 py-4 px-2">
+        <h2 class="text-3xl font-bold mb-5">
+          Cryptocurrency Trading Strategies
+        </h2>
+        <p class="mt-5">
+          Navigating the dynamic world of cryptocurrency trading requires a
+          well-defined strategy. A trading strategy serves as a systematic
+          method for buying and selling that can help traders manage risk and
+          make informed decisions. Here are some of the most commonly employed
+          strategies in cryptocurrency trading:
+        </p>
+        <div class="grid sm:grid-cols-12 grid-cols-1 gap-8 mt-5">
+          <div class="sm:col-span-4 max-h-[240px] overflow-hidden">
+            <img src="Image/poster1.jpg" alt="" />
+          </div>
+          <div class="sm:col-span-8">
+            <h3 class="font-bold text-2xl">Trend Trading Strategy</h3>
+            <p class="mt-4 text-lg">
+              Trend trading is a strategy predicated on the directional momentum
+              of market prices. Traders utilising this strategy aim to
+              capitalise on cryptocurrencies that are experiencing a positive
+              upward trend or a negative downward trend. The objective is to
+              enter the market in the direction of the trend, buying in an
+              upward trend and selling in a downward trend.
+            </p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-12 grid-cols-1 gap-8 mt-5">
+          <div class="sm:col-span-4 max-h-[240px] overflow-hidden">
+            <img src="Image/poster2.jpg" alt="" />
+          </div>
+          <div class="sm:col-span-8">
+            <h3 class="font-bold text-2xl">Range Trading Strategy</h3>
+            <p class="mt-4 text-lg">
+              Range trading is a strategy used when a cryptocurrency's price is
+              moving within a specific range, oscillating between defined
+              support and resistance levels. The objective is to buy at or near
+              the support level (the price level at which it tends not to fall
+              below) and sell at or near the resistance level (the price level
+              at which it tends not to rise above).
+            </p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-12 grid-cols-1 gap-8 mt-5">
+          <div class="sm:col-span-4 max-h-[240px] overflow-hidden">
+            <img src="Image/poster3.jpg" alt="" />
+          </div>
+          <div class="sm:col-span-8">
+            <h3 class="font-bold text-2xl">Breakout Trading Strategy</h3>
+            <p class="mt-4 text-lg">
+              Breakout trading strategy involves capitalising on price movements
+              after they break through a previously defined support or
+              resistance level. The premise is that once the price breaks
+              through a key level, it will continue in that direction. This
+              strategy requires prompt responses and disciplined risk
+              management.
+            </p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-12 grid-cols-1 gap-8 mt-5">
+          <div class="sm:col-span-4 max-h-[240px] overflow-hidden">
+            <img src="Image/poster4.png" alt="" />
+          </div>
+          <div class="sm:col-span-8">
+            <h3 class="font-bold text-2xl">Scalping Strategy</h3>
+            <p class="mt-4 text-lg">
+              Scalping is a high-frequency trading strategy that aims to take
+              advantage of small price fluctuations. Traders using this
+              strategy, known as scalpers, make numerous trades within a day,
+              aiming to accumulate small profits from each trade that add up
+              over time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Today Coin  -->
+      <section class="w-full px-2 today-coin text-white py-16 mt-14">
+        <div class="max-w-[1120px] m-auto">
+          <h2 class="text-2xl font-semibold">Top crypto today</h2>
+
+          <!-- Slide  -->
+          <div class="swiper mySwiper mt-8">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide flex justify-between rounded-xl bg-indigo-500 p-3 md:text-sm text-lg md:flex-row flex-col"
+              >
+                <div class="flex md:items-center gap-2 md:flex-row flex-col">
+                  <img
+                    class="md:w-8 md:h-8 h-14 w-14"
+                    src="Image/btc.svg"
+                    alt=""
+                  />
+                  <div>
+                    <h3>Bitcoin</h3>
+                    <span class="text-zinc-300 block">BTC</span>
+                  </div>
+                </div>
+                <span id="btc"></span>
+              </div>
+              <div
+                class="swiper-slide flex justify-between rounded-xl bg-indigo-500 p-3 md:text-sm text-lg md:flex-row flex-col"
+              >
+                <div class="flex gap-2 md:items-center md:flex-row flex-col">
+                  <img
+                    class="md:w-8 md:h-8 h-14 w-14"
+                    src="Image/ethereum.svg"
+                    alt=""
+                  />
+                  <div>
+                    <h3>Ethereum</h3>
+                    <span class="text-zinc-300 block">ETH</span>
+                  </div>
+                </div>
+                <span id="eth"></span>
+              </div>
+              <div
+                class="swiper-slide flex justify-between rounded-xl bg-indigo-500 p-3 md:text-sm text-lg md:flex-row flex-col"
+              >
+                <div class="flex gap-2 md:items-center md:flex-row flex-col">
+                  <img
+                    class="md:w-8 md:h-8 h-14 w-14"
+                    src="Image/xrp.svg"
+                    alt=""
+                  />
+                  <div>
+                    <h3>Ripple</h3>
+                    <span class="text-zinc-300 block">XRP</span>
+                  </div>
+                </div>
+                <span id="xrp"></span>
+              </div>
+              <div
+                class="swiper-slide flex justify-between rounded-xl bg-indigo-500 p-3 md:text-sm text-lg md:flex-row flex-col"
+              >
+                <div class="flex gap-2 md:items-center md:flex-row flex-col">
+                  <img
+                    class="md:w-8 md:h-8 h-14 w-14"
+                    src="Image/bnbinr.svg"
+                    alt=""
+                  />
+                  <div>
+                    <h3>BNB</h3>
+                    <span class="text-zinc-300 block">BNB</span>
+                  </div>
+                </div>
+                <span id="nbn"></span>
+              </div>
+              <div
+                class="swiper-slide flex justify-between rounded-xl bg-indigo-500 p-3 md:text-sm text-lg md:flex-row flex-col"
+              >
+                <div class="flex gap-2 md:items-center md:flex-row flex-col">
+                  <img
+                    class="md:w-8 md:h-8 h-14 w-14"
+                    src="Image/solana.com.png"
+                    alt=""
+                  />
+                  <div>
+                    <h3>Solana</h3>
+                    <span class="text-zinc-300 block">SOL</span>
+                  </div>
+                </div>
+                <span id="sol"></span>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Matching global  -->
+      <section class="w-full bg-gray-50 py-20 px-2" id="matching">
+        <div class="max-w-[1120px] m-auto">
+          <h2 class="text-3xl font-bold max-w-[460px]">
+            Matching global security & safety standards
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-10 grid-cols-1 mt-8">
+            <div>
+              <img src="Image/matching-fiu.svg" alt="" />
+              <h2 class="mt-4 text-xl font-bold">F.I.U. Compliant</h2>
+              <p class="mt-3">
+                Complying with the Indian anti money laundering laws
+              </p>
+            </div>
+            <div>
+              <img src="Image/matching-lock.svg" alt="" />
+              <h2 class="mt-4 text-xl font-bold">ISO/IEC 27001:2022</h2>
+              <p class="mt-3">
+                Certified for following global standards of security
+              </p>
+            </div>
+            <div>
+              <img src="Image/matching-machince.svg" alt="" />
+              <h2 class="mt-4 text-xl font-bold">Proof of Reserve</h2>
+              <p class="mt-3">
+                All assets are regularly monitored and audited by third party
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prioritising  -->
+      <section class="w-full py-20 px-2">
+        <div class="max-w-[1120px] m-auto">
+          <h2 class="text-3xl font-bold max-w-[460px]">
+            Prioritising your crypto experience
+          </h2>
+
+          <div class="grid md:grid-cols-3 grid-cols-1 gap-10 mt-8">
+            <div>
+              <img src="Image/message.svg" alt="" />
+              <h2 class="mt-4 text-xl font-bold">24x7 Support</h2>
+              <p class="mt-3">
+                Rely on our 24x7 Live chat support. Always here, always ready
+              </p>
+            </div>
+            <div>
+              <img src="Image/wallet.svg" alt="" />
+              <h2 class="mt-4 text-xl font-bold">
+                Free INR Deposits & Withdrawals
+              </h2>
+              <p class="mt-3">
+                Enjoy unlimited INR bank transfers at any time, free of charge
+              </p>
+            </div>
+            <div>
+              <img src="Image/tax.svg" alt="" />
+              <h2 class="mt-4 text-xl font-bold">Automated Tax Reports</h2>
+              <p class="mt-3">
+                Generate your crypto tax reports in less than 2 minutes
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full bg-[#0E102B] py-10 text-white px-2">
+        <div
+          class="max-w-[1120px] m-auto grid md:grid-cols-2 grid-cols-1 gap-10"
+        >
+          <div class="flex flex-col justify-center">
+            <h2 class="text-4xl font-semibold">
+              Writing crypto growth stories, From India for the world
+            </h2>
+            <h2 class="text-xl font-bold mt-6">Trusted by global investors</h2>
+            <div class="grid grid-cols-4 gap-5 mt-4">
+              <div>
+                <img class="" src="Image/company1.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company2.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company3.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company4.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company5.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company6.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company7.svg" alt="" />
+              </div>
+              <div>
+                <img class="" src="Image/company8.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <video src="Image/video-earth.mp4" autoplay loop></video>
+          </div>
+        </div>
+      </section>
+
+      <footer class="max-w-[1120px] m-auto mt-10 px-2">
+        <div
+          class="grid md:grid-cols-12 py-3 grid-cols-1 gap-5 border-b-2 border-gray-300"
+        >
+          <div class="col-span-3">
+            <h1 class="text-3xl text-indigo-500 font-bold">TraderCoin</h1>
+          </div>
+          <div class="col-span-9 grid grid-cols-4 gap-2">
+            <div>
+              <img
+                class="bg-white rounded-lg py-2"
+                src="Image/footer1.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="bg-white rounded-lg py-2"
+                src="Image/footer2.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="bg-white rounded-lg py-2"
+                src="Image/footer3.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="bg-white rounded-lg py-2"
+                src="Image/footer4.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between py-4 border-b-2 border-gray-300">
+          <div class="text-sm">
+            <h2 class="font-semibold">Contact Us</h2>
+            <ul class="*:mt-1">
+              <li>
+                whatsapp:
+                <button
+                  class="underline text-blue-600 font-bold"
+                  onclick="url()"
+                >
+                  Contact us
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="flex gap-4 text-2xl">
+            <button onclick="url()">
+              <i class="fa-brands fa-telegram"></i>
+            </button>
+            <button onclick="url()">
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+            <button onclick="url()">
+              <i class="fa-brands fa-x-twitter"></i>
+            </button>
+            <button onclick="url()">
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </div>
+        </div>
+        <div class="py-4">
+          <h2>© 2024 All rights reserved</h2>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
